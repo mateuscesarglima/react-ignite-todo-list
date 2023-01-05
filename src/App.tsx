@@ -1,10 +1,10 @@
-import ListPage from "@containers/ListPage/ListPage";
+import Page from "@containers/Page/Page";
 import GlobalStyles from "@styles/global.styles";
 
 function App() {
   return (
     <div>
-      <ListPage />
+      <Page />
       <GlobalStyles />
     </div>
   );

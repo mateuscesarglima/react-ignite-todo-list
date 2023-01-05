@@ -1,12 +1,13 @@
 import Header from "@components/ui/organism/Header/Header";
-import React from "react";
+import Main from "@components/ui/organism/Main/Main";
 
-const ListPage = () => {
+const Page = () => {
   return (
     <div>
       <Header />
+      <Main />
     </div>
   );
 };
 
-export default ListPage;
+export default Page;
