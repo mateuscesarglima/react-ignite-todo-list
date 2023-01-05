@@ -37,9 +37,11 @@ export const TasksListBody = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  text-align: center;
 
   > div:first-child {
     margin-top: 4rem;
+    text-align: center;
   }
 
   > div:nth-child(2) {
