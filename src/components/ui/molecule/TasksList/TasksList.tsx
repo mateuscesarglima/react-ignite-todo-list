@@ -4,7 +4,7 @@ import Clipboard from "@assets/Clipboard.png";
 import { ITaskList } from "@interfaces/index";
 import ListItem from "../ListItem/ListItem";
 
-const TasksList = ({ tasks }: ITaskList) => {
+const TasksList = ({ tasks, deleteTaskHandle }: ITaskList) => {
   return (
     <C.TasksListContainer>
       <C.TasksListHeader>
@@ -34,6 +34,7 @@ const TasksList = ({ tasks }: ITaskList) => {
                   id={task.id}
                   content={task.content}
                   isConcluded={task.isConcluded}
+                  deleteTaskHandle={deleteTaskHandle}
                 />
               </div>
             ))}

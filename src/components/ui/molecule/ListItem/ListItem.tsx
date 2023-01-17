@@ -1,8 +1,13 @@
-import { ITask } from "@interfaces/index";
+import { IListItem, ITask } from "@interfaces/index";
 import { Trash } from "phosphor-react";
 import React, { useState } from "react";
 import * as C from "./styles";
-const ListItem = ({ id, content, isConcluded }: ITask) => {
+const ListItem = ({
+  id,
+  content,
+  isConcluded,
+  deleteTaskHandle,
+}: IListItem) => {
   const [isChecked, setIsChecked] = useState(isConcluded);
   return (
     <C.ListItemContainer>
@@ -12,7 +17,7 @@ const ListItem = ({ id, content, isConcluded }: ITask) => {
         onChange={() => setIsChecked(!isChecked)}
       />
       <C.Content isChecked={isChecked}>{content}</C.Content>
-      <button>
+      <button onClick={() => deleteTaskHandle(id)}>
         <Trash size={18} />
       </button>
     </C.ListItemContainer>

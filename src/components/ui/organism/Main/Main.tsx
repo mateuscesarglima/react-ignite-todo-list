@@ -8,6 +8,7 @@ const Main = ({
   setTaskDescription,
   taskDescription,
   addTaskHandle,
+  deleteTaskHandle,
 }: IMain) => {
   return (
     <C.MainContainer>
@@ -16,7 +17,7 @@ const Main = ({
         taskDescription={taskDescription}
         addTaskHandle={addTaskHandle}
       />
-      <TasksList tasks={tasks} />
+      <TasksList tasks={tasks} deleteTaskHandle={deleteTaskHandle} />
     </C.MainContainer>
   );
 };

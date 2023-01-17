@@ -18,6 +18,13 @@ const Page = () => {
     ]);
   };
 
+  const deleteTaskHandle = (taskToBeDeleted: string): void => {
+    const taskWithoutDeletedOne = tasks.filter((task) => {
+      return task.id !== taskToBeDeleted;
+    });
+    setTasks(taskWithoutDeletedOne);
+  };
+
   return (
     <div>
       <Header />
@@ -26,6 +33,7 @@ const Page = () => {
         taskDescription={taskDescription}
         setTaskDescription={setTaskDescription}
         addTaskHandle={addTaskHandle}
+        deleteTaskHandle={deleteTaskHandle}
       />
     </div>
   );
