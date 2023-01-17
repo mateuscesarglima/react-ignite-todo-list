@@ -1,10 +1,12 @@
-import React from "react";
+import React, { ButtonHTMLAttributes } from "react";
 import * as C from "./styles";
 import PlusImg from "@assets/plus.svg";
 
-const AddTaskButton = () => {
+const AddTaskButton = ({
+  ...props
+}: ButtonHTMLAttributes<HTMLButtonElement>) => {
   return (
-    <C.Button>
+    <C.Button {...props}>
       Criar <img src={PlusImg} alt="" />
     </C.Button>
   );

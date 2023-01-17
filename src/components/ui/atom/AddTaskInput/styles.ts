@@ -7,5 +7,9 @@ export const Input = styled.input`
   background: var(--gray-500);
   border: none;
   border-radius: 8px;
-  color: var(--gray-300);
+  color: var(--gray-200);
+
+  &::placeholder {
+    color: var(--gray-300);
+  }
 `;

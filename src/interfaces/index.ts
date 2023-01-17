@@ -10,6 +10,13 @@ export interface ITask {
 
 export interface IMain {
   tasks: ITask[];
+  taskDescription: string;
+  setTaskDescription: (value: string) => void;
+  addTaskHandle: () => void;
 }
 
-export interface ITaskList extends IMain {}
+export interface ITaskList {
+  tasks: ITask[];
+}
+
+export interface IAddTask extends Omit<IMain, "tasks"> {}

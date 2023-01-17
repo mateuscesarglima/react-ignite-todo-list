@@ -3,11 +3,19 @@ import TasksList from "@components/ui/molecule/TasksList/TasksList";
 import { IMain } from "@interfaces/index";
 import * as C from "./styles";
 
-const Main = ({ tasks }: IMain) => {
-  console.log(tasks);
+const Main = ({
+  tasks,
+  setTaskDescription,
+  taskDescription,
+  addTaskHandle,
+}: IMain) => {
   return (
     <C.MainContainer>
-      <AddTask />
+      <AddTask
+        setTaskDescription={setTaskDescription}
+        taskDescription={taskDescription}
+        addTaskHandle={addTaskHandle}
+      />
       <TasksList tasks={tasks} />
     </C.MainContainer>
   );

@@ -5,11 +5,28 @@ import { useState } from "react";
 
 const Page = () => {
   const [tasks, setTasks] = useState(Task);
+  const [taskDescription, setTaskDescription] = useState("");
+
+  const addTaskHandle = (): void => {
+    setTasks([
+      ...tasks,
+      {
+        id: crypto.randomUUID(),
+        content: taskDescription,
+        isConcluded: false,
+      },
+    ]);
+  };
 
   return (
     <div>
       <Header />
-      <Main tasks={tasks} />
+      <Main
+        tasks={tasks}
+        taskDescription={taskDescription}
+        setTaskDescription={setTaskDescription}
+        addTaskHandle={addTaskHandle}
+      />
     </div>
   );
 };
