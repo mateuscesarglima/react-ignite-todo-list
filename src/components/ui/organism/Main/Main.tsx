@@ -1,13 +1,14 @@
 import AddTask from "@components/ui/molecule/AddTask/AddTask";
 import TasksList from "@components/ui/molecule/TasksList/TasksList";
-import React from "react";
+import { IMain } from "@interfaces/index";
 import * as C from "./styles";
 
-const Main = () => {
+const Main = ({ tasks }: IMain) => {
+  console.log(tasks);
   return (
     <C.MainContainer>
       <AddTask />
-      <TasksList />
+      <TasksList tasks={tasks} />
     </C.MainContainer>
   );
 };
