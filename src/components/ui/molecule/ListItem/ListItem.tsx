@@ -1,16 +1,19 @@
+import { ITask } from "@interfaces/index";
 import { Trash } from "phosphor-react";
-import React from "react";
+import React, { useState } from "react";
 import * as C from "./styles";
-const ListItem = () => {
+const ListItem = ({ id, content, isConcluded }: ITask) => {
+  const [isChecked, setIsChecked] = useState(isConcluded);
   return (
     <C.ListItemContainer>
-      <C.RadioButton type="radio" />
-      <p style={{ textAlign: "start" }}>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam,
-        facilis corporis. incidunt.
-      </p>
+      <C.CheckBox
+        type="checkbox"
+        checked={isChecked}
+        onChange={() => setIsChecked(!isChecked)}
+      />
+      <C.Content isChecked={isChecked}>{content}</C.Content>
       <button>
-        <Trash size={24} />
+        <Trash size={18} />
       </button>
     </C.ListItemContainer>
   );

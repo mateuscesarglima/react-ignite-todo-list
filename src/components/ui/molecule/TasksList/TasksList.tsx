@@ -5,7 +5,6 @@ import { ITaskList } from "@interfaces/index";
 import ListItem from "../ListItem/ListItem";
 
 const TasksList = ({ tasks }: ITaskList) => {
-  console.log(tasks);
   return (
     <C.TasksListContainer>
       <C.TasksListHeader>
@@ -30,7 +29,13 @@ const TasksList = ({ tasks }: ITaskList) => {
         ) : (
           <C.ListItemBox>
             {tasks.map((task) => (
-              <ListItem />
+              <div key={task.id}>
+                <ListItem
+                  id={task.id}
+                  content={task.content}
+                  isConcluded={task.isConcluded}
+                />
+              </div>
             ))}
           </C.ListItemBox>
         )}
