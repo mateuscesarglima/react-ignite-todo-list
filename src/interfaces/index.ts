@@ -26,3 +26,8 @@ export interface ITaskList {
 }
 
 export interface IAddTask extends Omit<IMain, "tasks" | "deleteTaskHandle"> {}
+
+export interface IToast {
+  type: "success" | "warning" | "error" | "info";
+  message: string;
+}

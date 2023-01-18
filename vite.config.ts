@@ -39,6 +39,10 @@ export default defineConfig({
         find: "@constants",
         replacement: resolve(__dirname, "./src/constants"),
       },
+      {
+        find: "@utils",
+        replacement: resolve(__dirname, "./src/utils"),
+      },
     ],
   },
 });

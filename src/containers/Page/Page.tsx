@@ -16,6 +16,7 @@ const Page = () => {
         isConcluded: false,
       },
     ]);
+    setTaskDescription("");
   };
 
   const deleteTaskHandle = (taskToBeDeleted: string): void => {

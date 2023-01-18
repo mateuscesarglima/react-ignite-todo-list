@@ -15,6 +15,12 @@ export const ListItemContainer = styled.div`
 
     > svg {
       color: var(--gray-300);
+      width: 24px;
+      height: 24px;
+
+      &:hover {
+        color: var(--danger);
+      }
     }
   }
 `;

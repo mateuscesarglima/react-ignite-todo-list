@@ -9,6 +9,7 @@
       "@styles/*": ["./styles/*"],
       "@types/*": ["./types/*"],
       "@interfaces/*": ["./interfaces/*"],
+      "@utils/*": ["./utils/*"],
       "@constants/*": ["./constants/*"]
     },
     "useDefineForClassFields": true,
