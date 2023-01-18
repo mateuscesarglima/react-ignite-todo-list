@@ -12,4 +12,9 @@ export const Button = styled.button`
   border-radius: 8px;
   color: var(--gray-100);
   font-weight: 700;
+
+  &:hover {
+    background: var(--blue);
+    color: #fff;
+  }
 `;
