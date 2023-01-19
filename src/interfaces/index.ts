@@ -18,11 +18,13 @@ export interface IMain {
   setTaskDescription: (value: string) => void;
   addTaskHandle: () => void;
   deleteTaskHandle: (taskToBeDeleted: string) => void;
+  concludedTasks?: number;
 }
 
 export interface ITaskList {
   tasks: ITask[];
   deleteTaskHandle: (taskToBeDeleted: string) => void;
+  concludedTasks?: number;
 }
 
 export interface IAddTask extends Omit<IMain, "tasks" | "deleteTaskHandle"> {}

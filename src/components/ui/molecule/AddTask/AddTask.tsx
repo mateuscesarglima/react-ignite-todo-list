@@ -16,6 +16,7 @@ const AddTask = ({
         onChange={(e) => setTaskDescription(e.target.value)}
         value={taskDescription}
         placeholder="Adicione uma nova tarefa"
+        required
       />
       <AddTaskButton onClick={() => addTaskHandle()} />
     </C.AddTaskContainer>

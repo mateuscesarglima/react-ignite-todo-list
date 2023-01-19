@@ -33,11 +33,6 @@ export const TasksListHeader = styled.header`
 
 export const TasksListBody = styled.div`
   border-top: 1px solid var(--gray-400);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
 
   > div:first-child {
     margin-top: 4rem;
@@ -58,6 +53,5 @@ export const ListItemBox = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-
   width: 100%;
 `;

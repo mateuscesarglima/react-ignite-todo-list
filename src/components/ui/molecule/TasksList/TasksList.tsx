@@ -4,7 +4,7 @@ import Clipboard from "@assets/Clipboard.png";
 import { ITaskList } from "@interfaces/index";
 import ListItem from "../ListItem/ListItem";
 
-const TasksList = ({ tasks, deleteTaskHandle }: ITaskList) => {
+const TasksList = ({ tasks, deleteTaskHandle, concludedTasks }: ITaskList) => {
   return (
     <C.TasksListContainer>
       <C.TasksListHeader>
@@ -12,7 +12,8 @@ const TasksList = ({ tasks, deleteTaskHandle }: ITaskList) => {
           Tarefas Criadas <span>{tasks.length}</span>
         </p>
         <p>
-          Tarefas Concluidas <span>0</span>
+          Tarefas Concluidas{" "}
+          <span>{`${concludedTasks} de ${tasks.length}`}</span>
         </p>
       </C.TasksListHeader>
       <C.TasksListBody>
